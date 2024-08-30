@@ -19,6 +19,8 @@ while True:
       print("20자리 이하의 숫자를 입력해주세요.")
       cnt += 1
     else:
+      cnt = 0
+      
       if minus:
         n = "-" + n
         
