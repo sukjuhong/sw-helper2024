@@ -3,12 +3,12 @@ import random
 while True:
     num_list = [n for n in range(1, 10)]
     answer = random.sample(num_list, 3)
-    print(answer)
-
+    
     print("숫자야구 게임을 시작합니다.")
 
     while True:
-        user = input("숫자를 입력해주세요 : ")
+        user_input = input("숫자를 입력해주세요 : ")
+        user = user_input.replace(" ", "")
         strike = 0
         ball = 0
         out = 0
@@ -39,6 +39,9 @@ while True:
             else:
                 print(f"{strike}S {ball}B")
 
-    retry = input("게임을 다시 시작하려면 Y, 종료하려면 N를 입력하세요.")
-    if retry == "N":
+    while True:
+        retry = input("게임을 다시 시작하려면 Y, 종료하려면 N를 입력하세요. ")
+        if retry == "N" or retry == "Y":
+            break
+    if retry == "N" :
         break
